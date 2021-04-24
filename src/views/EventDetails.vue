@@ -12,17 +12,17 @@ export default {
   props: ['id'],
   data() {
     return {
-      event: null
+      event: null,
     }
   },
   created() {
     EventService.getEvent(this.id)
-      .then(response => {
+      .then((response) => {
         this.event = response.data
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error)
       })
-  }
+  },
 }
 </script>

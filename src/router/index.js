@@ -3,6 +3,8 @@ import EventList from '../views/EventList.vue'
 import EventDetails from '../views/EventDetails.vue'
 import About from '../views/About.vue'
 
+const NotFound = { template: '<p>Page not found</p>' }
+
 const routes = [
   {
     path: '/',
@@ -19,6 +21,11 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'Notfound',
+    component: NotFound
   }
 ]
 
